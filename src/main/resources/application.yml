@@ -1,0 +1,16 @@
+server:
+  port: 80
+spring:
+  datasource:
+    druid:
+      username: root
+      password: root
+      url: jdbc:mysql://localhost:3306/ssm?serverTimezone=UTC
+      driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tbl_      #可以不用手动指定表名
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl     #添加MP运行日志
